@@ -1,0 +1,123 @@
+<div class="container container-table">
+  <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-2" style="color: black">
+    CATEGORIES
+  </h2>
+
+    <div style="width: 600px">
+      <div class="container" style="width: 600px">
+        <form id="form2">
+        <table class="table isSearch" cellspacing="0" style="background: rgba(76, 175, 80, 0.3)">
+          <tbody>
+            <tr>
+              <td class="body-item mbr-fonts-style display-3">
+                <img src="assets/images/categories/Charities.png" alt="Mobirise" title="" media-simple="true" style="height: 3.8rem;">
+                <input id='checkbox1' type="checkbox" value='{{isCharities}}'>
+              </td>
+              <td class="body-item mbr-fonts-style display-3">
+                <img src="assets/images/categories/Commute.png" alt="Mobirise" title="" media-simple="true" style="height: 3.8rem;">
+                <input id='checkbox2' type="checkbox" value='{{isCommute}}'>
+              </td>
+            </tr>
+            <tr>
+              <td class="body-item mbr-fonts-style display-3">
+                <img src="assets/images/categories/Debt.png" alt="Mobirise" title="" media-simple="true" style="height: 3.8rem;">
+                <input id='checkbox3' type="checkbox" value='{{isDebt}}' style='margin: 0%'>
+              </td>
+              <td class="body-item mbr-fonts-style display-3">
+                <img src="assets/images/categories/Drink.png" alt="Mobirise" title="" media-simple="true" style="height: 3.8rem;">
+                <input id='checkbox4' type="checkbox" value='{{isDrink}}' style='margin: 0%'>
+              </td>
+            </tr>
+            <tr>
+              <td class="body-item mbr-fonts-style display-3">
+                <img src="assets/images/categories/Education.png" alt="Mobirise" title="" media-simple="true" style="height: 3.8rem;">
+                <input id='checkbox5' type="checkbox" value='{{isEducation}}' style='margin: 0%'>
+              </td>
+              <td class="body-item mbr-fonts-style display-3">
+                <img src="assets/images/categories/Energy.png" alt="Mobirise" title="" media-simple="true" style="height: 3.8rem;">
+                <input id='checkbox6' type="checkbox" value='{{isEnergy}}' style='margin: 0%'>
+              </td>
+            </tr>
+            <tr>
+              <td class="body-item mbr-fonts-style display-7">
+                <img src="assets/images/categories/Food.png" alt="Mobirise" title="" media-simple="true" style="height: 3.8rem;">
+                <input id='checkbox7' type="checkbox" value='{{isFood}}' style='margin: 0%'>
+              </td>
+              <td class="body-item mbr-fonts-style display-7">
+                <img src="assets/images/categories/Housing.png" alt="Mobirise" title="" media-simple="true" style="height: 3.8rem;">
+                <input id='checkbox8' type="checkbox" value='{{isHousing}}'>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="body-item mbr-fonts-style display-3">
+                <img src="assets/images/categories/Insurance.png" alt="Mobirise" title="" media-simple="true" style="height: 3.8rem;">
+                <input id='checkbox9' type="checkbox" value='{{isInsurance}}'>
+              </td>
+              <td class="body-item mbr-fonts-style display-3">
+                <img src="assets/images/categories/Other.png" alt="Mobirise" title="" media-simple="true" style="height: 3.8rem;">
+                <input id='checkbox10' type="checkbox" value='{{isOther}}'>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="body-item mbr-fonts-style display-3">
+                <img src="assets/images/categories/Subscription.png" alt="Mobirise" title="" media-simple="true" style="height: 3.8rem;">
+                <input id='checkbox11' type="checkbox" value='{{isSubscription}}'>
+              </td>
+              <td class="body-item mbr-fonts-style display-3">
+                <img src="assets/images/categories/tv.png" alt="Mobirise" title="" media-simple="true" style="height: 3.8rem;">
+                <input id='checkbox12' type="checkbox" value='{{isTv}}'>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="body-item mbr-fonts-style display-3">
+                <img src="assets/images/categories/Vehicles.png" alt="Mobirise" title="" media-simple="true" style="height: 3.8rem;">
+                <input id='checkbox13' type="checkbox" value='{{isVehicles}}'>
+              </td>
+              <td class="body-item mbr-fonts-style display-3">
+                <img src="assets/images/categories/Water-3.png" alt="Mobirise" title="" media-simple="true" style="height: 3.8rem;">
+                <input id='checkbox14' type="checkbox" value='{{isWater}}'>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+
+      <div class="mbr-section-btn">
+        <button class="btn btn-md btn-secondary display-4" (click)='getTransactions()' >TRANSACTIONS DATA</button>
+      </div>
+
+
+        <table class="table isSearch" cellspacing="0" id="myTable" name="myTable" style="margin-top: 30px" *ngIf='isTrxViewing'>
+          <thead>
+            <tr class="table-heads">
+              <th class="head-item mbr-fonts-style display-7">
+                REASON</th>
+              <th class="head-item mbr-fonts-style display-7">
+                AMOUNT</th>
+              <th class="head-item mbr-fonts-style display-7">
+                CATEGORY</th>
+              <th class="head-item mbr-fonts-style display-7">
+                DATE</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor='let trx of transactions'>
+              <td class="body-item mbr-fonts-style display-7">
+                {{trx.reason}}</td>
+              <td class="body-item mbr-fonts-style display-7">
+                {{trx.amount}}</td>
+              <td class="body-item mbr-fonts-style display-7">
+                {{trx.category}}</td>
+              <td class="body-item mbr-fonts-style display-7">
+                {{trx.date}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <img src="assets/images/pig.jpeg" title="" media-simple="true" style="height: 3.8rem;">
+</div>
